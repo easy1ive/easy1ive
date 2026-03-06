@@ -34,6 +34,15 @@
 - More interpretable error analysis for VLM benchmarks
 - Data-centric iteration on multimodal evaluation sets
 
+## Research Map
+
+| Track | What I build |
+|---|---|
+| Routing | Query intent classification and modality dispatch logic |
+| Retrieval | Lightweight indexing pipelines for mixed corpora |
+| Evaluation | Capability-level slices (object/attribute/relation/ocr/reasoning) |
+| Engineering | Reproducible scripts, simple CLIs, and maintainable codebases |
+
 ## 2026 Goals
 
 - Release reproducible baselines with strong documentation
