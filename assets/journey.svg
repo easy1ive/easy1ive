@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="famulix memory pipeline: events, encode, graph, consolidate, decay, recall, context, brief, eval">
+  <defs>
+    <linearGradient id="jbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12162e"/>
+      <stop offset="1" stop-color="#191531"/>
+    </linearGradient>
+    <linearGradient id="rail" gradientUnits="userSpaceOnUse" x1="128" y1="158" x2="1072" y2="158">
+      <stop offset="0" stop-color="#3b4677"/>
+      <stop offset="0.5" stop-color="#e4572e"/>
+      <stop offset="1" stop-color="#7f9a86"/>
+    </linearGradient>
+    <style>
+      .kicker { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:4px; fill:#8ea2d8; }
+      .title { font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif; font-size:20px; font-weight:600; fill:#f0e6d2; }
+      .muted { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; fill:#7f88ad; }
+      .stop-label { font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif; font-size:13px; fill:#d7ddf2; text-anchor:middle; }
+      .stop-sub { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:9.5px; fill:#7f88ad; text-anchor:middle; letter-spacing:.6px; }
+      .ring { fill:#1b2144; stroke:#4a5490; stroke-width:1.4; }
+      .glyph { stroke:#c9d2f0; stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+      .hot .ring { stroke:#e4572e; }
+      .hot .glyph { stroke:#f3b48c; }
+      .cool .ring { stroke:#7f9a86; }
+      .cool .glyph { stroke:#b3c9b9; }
+      .pill { fill:#1c2247; stroke:#3d4677; stroke-width:1; }
+      .pill-t { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; fill:#c9d2f0; }
+      .flow { stroke:url(#rail); stroke-width:2; fill:none; stroke-dasharray:5 7; opacity:.85; animation:march 2.6s linear infinite; }
+      .halo { fill:none; stroke:#e4572e; stroke-width:1.2; opacity:0; transform-box:fill-box; transform-origin:center; animation:sweep 4.5s ease-in-out infinite; }
+      @keyframes march { to { stroke-dashoffset:-48; } }
+      @keyframes sweep { 0%,100% { opacity:0; transform:scale(1); } 40% { opacity:.55; transform:scale(1.55); } }
+      .node { opacity:1; animation:rise .7s ease-out both; }
+      @keyframes rise { from { opacity:0; transform:translateY(10px); } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#jbg)"/>
+  <text class="kicker" x="60" y="46">FAMULIX · MEMORY PIPELINE</text>
+  <text class="title" x="60" y="76">从一条事件，到一份可引用的每日简报</text>
+  <text class="muted" x="60" y="98">offline · deterministic replay · provenance on every fact</text>
+
+  <path class="flow" d="M128 158 H1072"/>
+
+  <g class="node" style="animation-delay:.05s">
+    <circle class="ring" cx="120" cy="158" r="21"/>
+    <path class="glyph" d="M112 158h16M120 150v16"/>
+    <text class="stop-label" x="120" y="206">事件</text>
+    <text class="stop-sub" x="120" y="222">EVENTS</text>
+  </g>
+  <g class="node" style="animation-delay:.1s">
+    <circle class="ring" cx="239" cy="158" r="21"/>
+    <path class="glyph" d="M231 166l7-16 7 16M234 161h8"/>
+    <text class="stop-label" x="239" y="206">编码</text>
+    <text class="stop-sub" x="239" y="222">ENCODE</text>
+  </g>
+  <g class="node hot" style="animation-delay:.15s">
+    <circle class="ring" cx="358" cy="158" r="21"/>
+    <circle class="halo" cx="358" cy="158" r="21"/>
+    <path class="glyph" d="M358 150l8 5v9l-8 5-8-5v-9zM350 155l8 5 8-5"/>
+    <text class="stop-label" x="358" y="206">记忆图谱</text>
+    <text class="stop-sub" x="358" y="222">GRAPH</text>
+  </g>
+  <g class="node" style="animation-delay:.2s">
+    <circle class="ring" cx="477" cy="158" r="21"/>
+    <path class="glyph" d="M469 166l18-16M469 160h5M483 156h5"/>
+    <text class="stop-label" x="477" y="206">巩固</text>
+    <text class="stop-sub" x="477" y="222">CONSOLIDATE</text>
+  </g>
+  <g class="node" style="animation-delay:.25s">
+    <circle class="ring" cx="596" cy="158" r="21"/>
+    <path class="glyph" d="M596 148v8l6 5M588 160a8 8 0 1 1 16 0 8 8 0 0 1-16 0"/>
+    <text class="stop-label" x="596" y="206">衰减</text>
+    <text class="stop-sub" x="596" y="222">DECAY</text>
+  </g>
+  <g class="node hot" style="animation-delay:.3s">
+    <circle class="ring" cx="715" cy="158" r="21"/>
+    <circle class="halo" cx="715" cy="158" r="21" style="animation-delay:1.6s"/>
+    <path class="glyph" d="M709 155a6 6 0 1 0 9 5M721 168l-6-6"/>
+    <text class="stop-label" x="715" y="206">检索</text>
+    <text class="stop-sub" x="715" y="222">RECALL</text>
+  </g>
+  <g class="node" style="animation-delay:.35s">
+    <circle class="ring" cx="834" cy="158" r="21"/>
+    <path class="glyph" d="M826 150h16M826 158h16M826 166h11"/>
+    <text class="stop-label" x="834" y="206">上下文</text>
+    <text class="stop-sub" x="834" y="222">CONTEXT</text>
+  </g>
+  <g class="node cool" style="animation-delay:.4s">
+    <circle class="ring" cx="953" cy="158" r="21"/>
+    <path class="glyph" d="M945 150h16v16h-16zM949 154h8M949 158h8M949 162h5"/>
+    <text class="stop-label" x="953" y="206">简报</text>
+    <text class="stop-sub" x="953" y="222">BRIEF</text>
+  </g>
+  <g class="node cool" style="animation-delay:.45s">
+    <circle class="ring" cx="1072" cy="158" r="21"/>
+    <path class="glyph" d="M1064 168a8 8 0 1 1 16 0M1066 164l4-6 4 6"/>
+    <text class="stop-label" x="1072" y="206">评测</text>
+    <text class="stop-sub" x="1072" y="222">EVAL</text>
+  </g>
+
+  <g>
+    <rect class="pill" x="60" y="252" width="128" height="26" rx="13"/>
+    <text class="pill-t" x="76" y="269">520 commits</text>
+    <rect class="pill" x="200" y="252" width="122" height="26" rx="13"/>
+    <text class="pill-t" x="216" y="269">900+ tests</text>
+    <rect class="pill" x="334" y="252" width="112" height="26" rx="13"/>
+    <text class="pill-t" x="350" y="269">28 modules</text>
+    <rect class="pill" x="458" y="252" width="104" height="26" rx="13"/>
+    <text class="pill-t" x="474" y="269">NumPy core</text>
+    <rect class="pill" x="574" y="252" width="150" height="26" rx="13"/>
+    <text class="pill-t" x="590" y="269">byte-deterministic</text>
+  </g>
+  <text class="muted" x="1150" y="269" text-anchor="end">2025 — 2026 · personal-agent research playground</text>
+</svg>
