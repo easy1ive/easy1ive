@@ -78,7 +78,7 @@ Famulix 是一个默认离线运行的个人智能体框架。随项目提供的
 
 <strong>Chen Chunzhe</strong> · 陈淳哲
 
-`easy1ive` · 广州
+`easy1ive` · 深圳
 
 <sub>Memory is a design problem, not a storage problem.</sub>
 
